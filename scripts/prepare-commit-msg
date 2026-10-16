@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Strips Cursor Agent co-author trailers. Install: cp scripts/prepare-commit-msg .git/hooks/prepare-commit-msg && chmod +x .git/hooks/prepare-commit-msg
+MSG_FILE="${1:?}"
+case "$(uname -s)" in
+  Darwin) sed -i '' '/cursoragent@cursor\.com/d;/Co-authored-by: Cursor/d' "$MSG_FILE" ;;
+  *) sed -i '/cursoragent@cursor\.com/d;/Co-authored-by: Cursor/d' "$MSG_FILE" ;;
+esac
