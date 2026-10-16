@@ -1,0 +1,254 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-a {
+  width: 420px;
+  height: 420px;
+  background: #3d5afe;
+  opacity: 0.22;
+  top: -120px;
+  right: -80px;
+}
+
+.glow-b {
+  width: 360px;
+  height: 360px;
+  background: #00c2a8;
+  opacity: 0.12;
+  bottom: 10%;
+  left: -100px;
+}
+
+.header,
+main,
+.footer {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.brand-mark {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5b8cff, #00c2a8);
+  box-shadow: 0 0 20px rgba(91, 140, 255, 0.6);
+}
+
+.nav {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.nav a {
+  color: var(--text-muted);
+}
+
+.nav a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.hero {
+  padding: 4rem 0 3rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+.hero h1 {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0 0 1.25rem;
+  max-width: 18ch;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: #a8c4ff;
+}
+
+.lede {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 42ch;
+  margin: 0 0 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.35rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #5b8cff, #4068d4);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(91, 140, 255, 0.35);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.06);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn-ghost:hover {
+  background: var(--bg-elevated);
+  text-decoration: none;
+}
+
+.confirm {
+  margin-top: 1rem;
+  color: #7dffb2;
+  font-size: 0.95rem;
+}
+
+.agenda {
+  padding: 2rem 0 3rem;
+}
+
+.agenda h2,
+.about h2 {
+  font-size: 1.35rem;
+  margin: 0 0 1.25rem;
+}
+
+.session-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.session-card {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 1rem;
+  padding: 1.25rem 1.35rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.session-card time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.session-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.session-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.about {
+  padding-bottom: 3rem;
+}
+
+.about-card {
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, rgba(91, 140, 255, 0.08), transparent);
+}
+
+.about-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+}
+
+.about-card li + li {
+  margin-top: 0.5rem;
+}
+
+.footer {
+  padding: 2rem 1.5rem 2.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 540px) {
+  .session-card {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
