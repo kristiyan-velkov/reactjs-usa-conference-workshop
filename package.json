@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dont-install-this-pkg": "^1.0.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
